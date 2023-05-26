@@ -1,0 +1,80 @@
+.logo {
+  object-fit: contain;
+  width: px-to-em(86px);
+  height: px-to-em(59px);
+}
+.burger {
+  @include flex(row, nowrap, center, center, 0);
+  background: $color-purple;
+  padding: px-to-em(8px);
+  border-radius: 50%;
+  position: relative;
+  border: px-to-em(2px) solid #fff;
+  @include responsive(px-to-em(600px)) {
+    display: none;
+  }
+  &__bottom {
+    position: fixed;
+    bottom: px-to-em(5px);
+    right: 0;
+    box-shadow: px-to-em(0px) px-to-em(8px) px-to-em(12px) px-to-em(-2px)
+      rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    z-index: 20;
+    @include responsive(px-to-em(600px)) {
+      display: none;
+    }
+  }
+  &__menu {
+    position: 'absolute';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+.main {
+  @include flex(column, nowrap, center, center, 1.5em);
+}
+.close {
+  filter: brightness(0%);
+}
+.svg {
+  width: px-to-em(70px);
+  height: px-to-em(70px);
+}
+.routes {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: $color-purple;
+  @include flex(column, nowrap, center, center, 1.5em);
+  &__div {
+    width: 100%;
+    height: 3em;
+    flex-grow: 1;
+  }
+  &__a {
+    color: $color-gentle;
+    font-size: px-to-em(20px);
+    font-family: GothamMedium;
+    width: 100%;
+    height: 100%;
+    @include flex(column, nowrap, center, center, 1.5em);
+    &:hover {
+      background: #8e2de270;
+    }
+  }
+}
+.underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: $color-blue;
+}
