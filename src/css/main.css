@@ -607,18 +607,18 @@ button {
   align-items: center;
   gap: 1em;
   cursor: pointer;
+  position: relative;
 }
 .tech__name {
-  font-size: 1.1875em;
+  font-size: 0.9375em;
 }
 .tech__description {
   background: #323232;
   position: absolute;
-  bottom: 100%;
-  box-sizing: content-box;
+  bottom: 105%;
+  box-sizing: border-box;
   padding: 0.5em;
-  left: 2%;
-  width: 90%;
+  width: 200px;
   color: #f7f6f6;
   line-height: 1.2;
   display: flex;
@@ -627,7 +627,7 @@ button {
   align-items: center;
   gap: 1em;
   border-radius: 0.625em;
-  font-size: 1.0625em;
+  font-size: 0.875em;
   z-index: 2;
 }
 .tech__down {

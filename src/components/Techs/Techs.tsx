@@ -21,6 +21,7 @@ export default function Techs() {
                   tech={icon}
                   index={index}
                   top={tech[2]}
+                  length={tech[1].length}
                 />
               ))}
             </div>

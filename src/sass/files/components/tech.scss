@@ -29,24 +29,25 @@
   &__article {
     @include flex(column, wrap, center, center, 1em);
     cursor: pointer;
+    position: relative;
   }
   &__name {
-    font-size: px-to-em(19px);
+    font-size: px-to-em(15px);
   }
   &__description {
     background: $color-black;
     position: absolute;
-    bottom: 100%;
-    box-sizing: content-box;
+    bottom: 105%;
+    box-sizing: border-box;
     padding: px-to-em(8px);
-    left: 2%;
-    width: 90%;
+    width: 200px;
     color: $color-gentle;
     line-height: 1.2;
     @include flex(column, wrap, center, center, 1em);
     border-radius: px-to-em(10px);
-    font-size: px-to-em(17px);
+    font-size: px-to-em(14px);
     z-index: 2;
+    // clip-path: url(#msg);
   }
   &__down {
     position: absolute;
