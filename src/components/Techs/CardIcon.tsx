@@ -30,23 +30,23 @@ export default function CardIcon({ tech, index, top, length }: CardIconProps) {
   let positionDom =
     value === 0
       ? {
-          left: '0%',
+          left: '4px',
         }
       : value === 1
       ? {
-          left: '-60px',
+          left: '-81px',
         }
       : value === 2
       ? {
           // left: '-100%',
-          right: '0',
+          right: '-4px',
         }
       : {
-          left: '0%',
+          left: '4px',
         };
   if (length === 1) {
     positionDom = {
-      left: '-60px',
+      left: '-81px',
     };
   }
   return (

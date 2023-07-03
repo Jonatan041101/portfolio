@@ -605,12 +605,12 @@ button {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
   cursor: pointer;
   position: relative;
 }
 .tech__name {
-  font-size: 0.9375em;
+  font-size: 1em;
 }
 .tech__description {
   background: #323232;
@@ -618,7 +618,7 @@ button {
   bottom: 105%;
   box-sizing: border-box;
   padding: 0.5em;
-  width: 200px;
+  width: 242px;
   color: #f7f6f6;
   line-height: 1.2;
   display: flex;
