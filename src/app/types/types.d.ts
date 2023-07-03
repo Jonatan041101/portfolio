@@ -17,7 +17,7 @@ export interface Projects {
   id: number;
   name: string;
   imageMobile: string;
-  imageDesktop: string;
+  imageDesktop: string[];
   description: string;
   linkDeploy?: string;
   linkYoutube?: string;

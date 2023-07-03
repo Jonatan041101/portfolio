@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { variantsProject } from '@/variants/opacity';
 type Props = {
-  close: () => void;
+  close: (view: boolean) => void;
 };
 export interface LinksMobile {
   route: string;
@@ -43,7 +43,11 @@ export default function MenuMobile({ close }: Props) {
     >
       {links.map((link) => (
         <div className="routes__div" key={link.id}>
-          <a className="routes__a" href={link.route} onClick={close}>
+          <a
+            className="routes__a"
+            href={link.route}
+            onClick={() => close(false)}
+          >
             {link.name}
           </a>
         </div>

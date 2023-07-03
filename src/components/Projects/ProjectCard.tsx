@@ -1,9 +1,5 @@
 import { Projects } from '@/app/types/types';
 import React from 'react';
-import { frontend } from '../icons/TechsInformationId/frontend';
-import { backendIcons } from '../icons/TechsInformationId/backend';
-import { controller } from '../icons/TechsInformationId/controllers';
-import { mobile } from '../icons/TechsInformationId/mobile';
 import ImageCard from './ImageCard';
 import { motion } from 'framer-motion';
 import { variantsProject } from '@/variants/opacity';
@@ -16,19 +12,6 @@ export default function ProjectCard({
   project,
   changeInfoCardProject,
 }: ProjectCardProps) {
-  const frontendTech = frontend.filter(({ id }) =>
-    project.techsFrontend?.includes(id),
-  );
-  const frontendMobile = mobile.filter(({ id }) =>
-    project.techsFrontendMobile?.includes(id),
-  );
-  const backendTech = backendIcons.filter(({ id }) =>
-    project.techsBackend.includes(id),
-  );
-  const controllerTech = controller.filter(({ id }) =>
-    project.techsController.includes(id),
-  );
-
   return (
     <motion.article
       variants={variantsProject}

@@ -1,26 +1,31 @@
+import { useBearStore } from '@/store/store';
 import { useCycle } from 'framer-motion';
-import React, { useState } from 'react';
 
 export default function useBurger() {
-  const [viewRoutes, setViewRoutes] = useState<boolean>(false);
+  const {
+    handleChangeViewMenuMobile,
+    viewMenuMobile,
+    burgerButtonTop,
+    handleChangeButtonTop,
+  } = useBearStore((state) => state);
   const [burger, toogleBurger] = useCycle<boolean>(true, false);
-
-  const openRoutes = () => setViewRoutes(true);
   const closeRoutes = () => {
     document.body.style.overflowY = 'auto';
     toogleBurger();
-    setViewRoutes(false);
+    handleChangeViewMenuMobile(false);
   };
-  const routes = () => {
-    viewRoutes
+  const routes = (top: boolean) => {
+    viewMenuMobile
       ? (document.body.style.overflowY = 'auto')
       : (document.body.style.overflowY = 'hidden');
     toogleBurger();
-    setViewRoutes(!viewRoutes);
+    handleChangeButtonTop(top);
+    handleChangeViewMenuMobile(!viewMenuMobile);
   };
 
   return {
-    viewRoutes,
+    viewRoutes: viewMenuMobile,
+    burgerButtonTop,
     burger,
     closeRoutes,
     routes,

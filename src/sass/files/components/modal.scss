@@ -1,53 +1,60 @@
 .modal {
   position: fixed;
-  width: 100vw;
   height: 100vh;
+  width: 100%;
   backdrop-filter: blur(1em);
   top: 0;
   z-index: 30;
   @include flex(row, nowrap, center, center, px-to-em(0px));
   &__container {
-    width: 100vw;
-    height: 100vh;
+    padding: 0 0 0.5em 0;
+    width: 95%;
+    max-width: 900px;
     background: #fff;
-    @include flex(column, nowrap, flex-start, center, 1em);
+    overflow: auto;
+    @include flex(column, nowrap, flex-start, center, 0.75em);
     box-shadow: px-to-em(0px) px-to-em(8px) px-to-em(12px) px-to-em(-2px)
       rgba(0, 0, 0, 0.75);
     border-radius: 1em;
+    height: 95vh;
     @include responsive(px-to-em(480px)) {
       max-width: 100vw;
-      max-height: 100vh;
+      // max-height: 100vh;
+      height: 95vh;
     }
     @include responsive(px-to-em(780px)) {
       max-width: px-to-em(700px);
-      max-height: px-to-em(700px);
+      // max-height: px-to-em(700px);
+      height: 95vh;
     }
     @include responsive(px-to-em(1024px)) {
       max-width: px-to-em(800px);
-      max-height: px-to-em(800px);
+      // max-height: px-to-em(800px);
+      height: 95vh;
     }
     @include responsive(px-to-em(1024px)) {
       max-width: px-to-em(900px);
-      max-height: px-to-em(900px);
+      // max-height: px-to-em(900px);
+      height: 95vh;
     }
   }
   &__top {
     @include flex(row, nowrap, space-between, center, 0);
     padding: px-to-em(0px) px-to-em(3px);
-    background-image: url('https://res.cloudinary.com/di0jcyqyv/image/upload/v1682632542/images-users/bk9durne12qccuzcbi33.png');
-    background-size: contain;
+    background: $color-blue;
+    background-size: scale-down;
     background-position: 0;
-    height: 3.3em;
+    padding: 0.5em;
     width: 100%;
   }
   &__name {
     font-family: GothamMedium;
-    font-size: px-to-em(20px);
+    font-size: px-to-em(26px);
     color: $color-gentle;
   }
   &__image {
     object-fit: contain;
-    width: 100%;
+    width: 90%;
     border-radius: 1em;
     max-width: px-to-em(850px);
     height: auto;
@@ -65,8 +72,8 @@
     @include flex(row, wrap, center, center, 0.5em);
   }
   &__icon > svg {
-    width: px-to-em(45px);
-    height: px-to-em(45px);
+    width: px-to-em(35px);
+    height: px-to-em(35px);
   }
   &__description {
     text-align: center;
@@ -78,4 +85,61 @@
   &__links {
     @include flex(row, wrap, center, center, 0.5em);
   }
+  &__content {
+    // background: red;
+    flex-grow: 1;
+    @include flex(column, nowrap, space-around, center, 0.5em);
+  }
+  &__first {
+    @include flex(column, nowrap, center, center, 1em);
+  }
+  &__imagess {
+    width: 100%;
+    @include flex(column, nowrap, center, center, 0.5em);
+  }
+  &__techss {
+    @include flex(column, nowrap, center, center, 1em);
+  }
+  &__youtube {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0 0.5em;
+    @include flex(column, nowrap, center, center, 0);
+    backdrop-filter: blur(1em);
+    &--close {
+      padding: 0.5em 0;
+      width: 100%;
+      @include flex(row, nowrap, flex-end, flex-end, 0);
+    }
+    &--i {
+      width: 1.2em;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        color: $color-blue;
+      }
+    }
+  }
+  &__video {
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+  }
+  &__buttons {
+    display: flex;
+    gap: 0.5em;
+  }
+  &__button {
+    width: 0.8em;
+    height: 0.8em;
+    background: $color-black;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+}
+[data-button='true'] {
+  background: $color-blue;
 }

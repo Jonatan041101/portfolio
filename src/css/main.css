@@ -241,6 +241,7 @@ button {
   position: fixed;
   bottom: 0.3125em;
   right: 0;
+  cursor: pointer;
   box-shadow: 0em 0.5em 0.75em -0.125em rgba(0, 0, 0, 0.75);
   border-radius: 50%;
   z-index: 20;
@@ -330,7 +331,7 @@ button {
   width: 100vw;
   top: 0;
   position: fixed;
-  z-index: 20;
+  z-index: 3;
 }
 .header__div {
   display: flex;
@@ -679,7 +680,6 @@ button {
 }
 .projects__single {
   position: relative;
-  z-index: 10;
   flex-grow: 1;
 }
 .projects__container {
@@ -765,6 +765,7 @@ button {
   max-width: 12.5em;
   width: 90vw;
   height: 18.5em;
+  cursor: pointer;
 }
 .projects__image {
   width: 100%;
@@ -797,8 +798,8 @@ button {
 
 .modal {
   position: fixed;
-  width: 100vw;
   height: 100vh;
+  width: 100%;
   backdrop-filter: blur(1em);
   top: 0;
   z-index: 30;
@@ -809,39 +810,42 @@ button {
   gap: 0em;
 }
 .modal__container {
-  width: 100vw;
-  height: 100vh;
+  padding: 0 0 0.5em 0;
+  width: 95%;
+  max-width: 900px;
   background: #fff;
+  overflow: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 1em;
+  gap: 0.75em;
   box-shadow: 0em 0.5em 0.75em -0.125em rgba(0, 0, 0, 0.75);
   border-radius: 1em;
+  height: 95vh;
 }
 @media screen and (min-width: 30em) {
   .modal__container {
     max-width: 100vw;
-    max-height: 100vh;
+    height: 95vh;
   }
 }
 @media screen and (min-width: 48.75em) {
   .modal__container {
     max-width: 43.75em;
-    max-height: 43.75em;
+    height: 95vh;
   }
 }
 @media screen and (min-width: 64em) {
   .modal__container {
     max-width: 50em;
-    max-height: 50em;
+    height: 95vh;
   }
 }
 @media screen and (min-width: 64em) {
   .modal__container {
     max-width: 56.25em;
-    max-height: 56.25em;
+    height: 95vh;
   }
 }
 .modal__top {
@@ -851,20 +855,20 @@ button {
   align-items: center;
   gap: 0;
   padding: 0em 0.1875em;
-  background-image: url("https://res.cloudinary.com/di0jcyqyv/image/upload/v1682632542/images-users/bk9durne12qccuzcbi33.png");
-  background-size: contain;
+  background: #9dc6ec;
+  background-size: scale-down;
   background-position: 0;
-  height: 3.3em;
+  padding: 0.5em;
   width: 100%;
 }
 .modal__name {
   font-family: GothamMedium;
-  font-size: 1.25em;
+  font-size: 1.625em;
   color: #f7f6f6;
 }
 .modal__image {
   object-fit: contain;
-  width: 100%;
+  width: 90%;
   border-radius: 1em;
   max-width: 53.125em;
   height: auto;
@@ -893,8 +897,8 @@ button {
   gap: 0.5em;
 }
 .modal__icon > svg {
-  width: 2.8125em;
-  height: 2.8125em;
+  width: 2.1875em;
+  height: 2.1875em;
 }
 .modal__description {
   text-align: center;
@@ -915,6 +919,87 @@ button {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+}
+.modal__content {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5em;
+}
+.modal__first {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.modal__imagess {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.modal__techss {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.modal__youtube {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 0.5em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  backdrop-filter: blur(1em);
+}
+.modal__youtube--close {
+  padding: 0.5em 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0;
+}
+.modal__youtube--i {
+  width: 1.2em;
+  cursor: pointer;
+}
+.modal__youtube--i:hover {
+  transform: scale(1.1);
+  color: #9dc6ec;
+}
+.modal__video {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16/9;
+}
+.modal__buttons {
+  display: flex;
+  gap: 0.5em;
+}
+.modal__button {
+  width: 0.8em;
+  height: 0.8em;
+  background: #323232;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+[data-button=true] {
+  background: #9dc6ec;
 }
 
 .input {

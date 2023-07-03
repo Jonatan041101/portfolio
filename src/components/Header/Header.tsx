@@ -1,11 +1,21 @@
+'use client';
 import React from 'react';
 import Logo from './Logo';
 import { icons } from '../icons/TechsInformationId';
 import BurgerAction from './BurgerAction';
 import LinksPage from './LinksPage';
+import { useBearStore } from '@/store/store';
+import { AnimatePresence } from 'framer-motion';
+import MenuMobile from './MenuMobile';
 export default function Header() {
+  const { viewMenuMobile, handleChangeViewMenuMobile } = useBearStore(
+    (state) => state,
+  );
   return (
     <header className="header">
+      <AnimatePresence>
+        {viewMenuMobile && <MenuMobile close={handleChangeViewMenuMobile} />}
+      </AnimatePresence>
       <div className="header__div">
         <Logo />
 
