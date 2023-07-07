@@ -106,6 +106,26 @@ export const projectsMap: Projects[] = [
     linkDeploy: 'https://master--helpful-halva-3740f0.netlify.app/',
     techsFrontend: [120, 121, 123, 126, 127],
   },
+  {
+    id: 208,
+    description:
+      'Desarrollé una aplicación web innovadora de gestión de listas de compras. Permite agregar, crear y eliminar artículos, ofrece historial detallado de compras, estadísticas de productos y categorías, y un gráfico interactivo. Interfaz intuitiva y experiencia de usuario optimizada. ',
+    imageDesktop: [
+      'https://res.cloudinary.com/damjxqb5f/image/upload/v1688764004/Captura_de_pantalla_2023-07-07_175914_p396ve.png',
+      'https://res.cloudinary.com/damjxqb5f/image/upload/v1688764004/Captura_de_pantalla_2023-07-07_175922_q9y4vs.png',
+      'https://res.cloudinary.com/damjxqb5f/image/upload/v1688764005/Captura_de_pantalla_2023-07-07_175932_yac2cx.png',
+    ],
+    imageMobile:
+      'https://res.cloudinary.com/damjxqb5f/image/upload/v1688764004/Captura_de_pantalla_2023-07-07_175948_iaepfb.png',
+    name: 'VideoGames',
+    // techsFrontendMobile: [130, 131, 132],
+    techsBackend: [110, 111, 113, 117, 118],
+    techsController: [140],
+    techsFrontend: [123, 126, 127],
+    linkGithub: 'https://github.com/Jonatan041101/shopingify-frontend',
+    // linkDeploy: 'https://main--gleaming-stardust-11d51a.netlify.app/',
+    linkYoutube: 'https://www.youtube.com/watch?v=KVOw0-aBeI4',
+  },
 ];
 
 export const allProjects: Projects[] = [...projectsMap, initialProject];
